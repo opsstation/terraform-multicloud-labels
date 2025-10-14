@@ -1,7 +1,7 @@
 name: Terraform-Lint
 on:
   push:
-    branches: [ workflow ]
+    branches: [ main ]
   pull_request:
 
 jobs:
