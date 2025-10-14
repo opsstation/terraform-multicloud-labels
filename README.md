@@ -3,7 +3,7 @@
 [![OpsStation](https://img.shields.io/badge/Made%20by-OpsStation-blue?style=flat-square&logo=terraform)](https://www.opsstation.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Terraform](https://img.shields.io/badge/Terraform-1.6%2B-purple.svg?logo=terraform)](#)
-[![CI](https://github.com/OpsStation/terraform-multicloud-labels/actions/workflows/ci.yml/badge.svg)](#)
+[![CI](https://github.com/OpsStation/terraform-multicloud-labels/actions/workflows/ci.yml/badge.svg)](https://github.com/OpsStation/terraform-multicloud-labels/actions/workflows/ci.yml)
 
 > 🧩 **A universal, opinionated Terraform module by [OpsStation](https://www.opsstation.com)**  
 > to generate consistent **resource names, tags, and labels** across **AWS, Azure, GCP, DigitalOcean, and Hetzner**.
@@ -38,7 +38,8 @@
 ### ☁️ AWS Example
 ```hcl
 module "labels" {
-  source      = "git::https://github.com/OpsStation/terraform-multicloud-labels.git"
+  source      = "opsstation/labels/multicloud"
+  version     = "1.0.0"
   name        = "payment-api"
   environment = "prod"
   repository  = "terraform-multicloud-labels"
@@ -58,7 +59,8 @@ resource "aws_security_group" "main" {
 ### ☁️ GCP Example
 ```hcl
 module "labels" {
-  source      = "git::https://github.com/OpsStation/terraform-multicloud-labels.git"
+  source      = "opsstation/labels/multicloud"
+  version     = "1.0.0"
   name        = "payment-api"
   environment = "prod"
   repository  = "terraform-multicloud-labels"
@@ -75,7 +77,8 @@ resource "google_storage_bucket" "main" {
 ```hcl
 
 module "labels" {
-  source      = "git::https://github.com/OpsStation/terraform-multicloud-labels.git"
+  source      = "opsstation/labels/multicloud"
+  version     = "1.0.0"
   name        = "payment-api"
   environment = "prod"
   repository  = "terraform-multicloud-labels"
@@ -97,7 +100,8 @@ resource "digitalocean_droplet" "main" {
 ### ☁️ Hetzner Example
 ```hcl
 module "labels" {
-  source      = "git::https://github.com/OpsStation/terraform-multicloud-labels.git"
+  source      = "opsstation/labels/multicloud"
+  version     = "1.0.0"
   name        = "payment-api"
   environment = "dev"
   repository  = "terraform-multicloud-labels"
@@ -115,7 +119,8 @@ resource "hcloud_server" "main" {
 ### ☁️ Azure Example
 ```hcl
 module "labels" {
-  source      = "git::https://github.com/OpsStation/terraform-multicloud-labels.git"
+  source      = "opsstation/labels/multicloud"
+  version     = "1.0.0"
   name        = "payment-api"
   environment = "uat"
   repository  = "terraform-multicloud-labels"
